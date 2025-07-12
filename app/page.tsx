@@ -1,210 +1,3 @@
-// "use client"
-// import { Button } from "@/components/ui/button"
-// import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-// import { Badge } from "@/components/ui/badge"
-// import Link from "next/link"
-// import Navbar from "@/components/navbar"
-// import Footer from "@/components/footer"
-
-// export default function HeroLandingPage() {
-//   return (
-//     <div className="min-h-screen w-full relative  overflow-hidden bg-gradient-to-br from-gray-900 via-black to-purple-900">
-//       {/* Video Background */}
-//       <div className="absolute inset-0 w-full h-full">
-//         <video autoPlay muted loop className="w-full h-full object-contain">
-//           <source src="/model.mp4" type="video/mp4" />
-//         </video>
-//         {/* Dark overlay for better text readability */}
-//         <div className="absolute inset-0 bg-black/50"></div>
-//       </div>
-
-//       <Navbar />
-
-//       {/* Hero Section */}
-//       <div className="relative z-10 h-screen flex items-center justify-center">
-//         <div className="text-center max-w-4xl mx-auto px-6">
-//           <h1 className="font-sans mt-20 pt-26 font-extrabold text-6xl md:text-8xl mb-6 p-20 bg-gradient-to-r from-white via-blue-200 to-purple-400 bg-clip-text text-transparent fade-in-up">
-//             Try
-//             <br />
-//             No-Code Experience
-//           </h1>
-//           <p className="font-sans font-medium text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto fade-in-up" style={{ animationDelay: '0.3s' }}>
-//             Step into the next dimension of digital innovation
-//           </p>
-//           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-//             <Link href="/get-started">
-//               <Button
-//                 size="lg"
-//                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg transition-all duration-300 hover:scale-105"
-//               >
-//                 Get Started →
-//               </Button>
-//             </Link>
-//             <Link href="/watch-demo">
-//               <Button
-//                 size="lg"
-//                 variant="outline"
-//                 className="border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg bg-transparent transition-all duration-300 hover:scale-105"
-//               >
-//                 ▶ Watch Demo
-//               </Button>
-//             </Link>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Pricing Section */}
-//       <div id="pricing" className="relative z-10 py-20 px-6">
-//         <div className="container mx-auto max-w-6xl">
-//           <div className="text-center mb-16">
-//             <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-blue-200 to-purple-400 bg-clip-text text-transparent">
-//               Choose Your Plan
-//             </h2>
-//             <p className="text-xl text-gray-300 max-w-2xl mx-auto">Start for free and upgrade as you grow</p>
-//           </div>
-
-//           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-//             {/* Free Tier */}
-//             <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white relative transition-all duration-300 hover:scale-105 hover:bg-white/15">
-//               <CardHeader className="text-center pb-8">
-//                 <CardTitle className="text-2xl font-bold">Free</CardTitle>
-//                 <CardDescription className="text-gray-300">Perfect for getting started</CardDescription>
-//                 <div className="mt-4">
-//                   <span className="text-4xl font-bold">$0</span>
-//                   <span className="text-gray-300">/month</span>
-//                 </div>
-//               </CardHeader>
-//               <CardContent className="space-y-4">
-//                 <ul className="space-y-3">
-//                   <li className="flex items-center">
-//                     <span className="text-green-400 mr-3">✓</span>
-//                     Basic 3D experiences
-//                   </li>
-//                   <li className="flex items-center">
-//                     <span className="text-green-400 mr-3">✓</span>5 projects per month
-//                   </li>
-//                   <li className="flex items-center">
-//                     <span className="text-green-400 mr-3">✓</span>
-//                     Community support
-//                   </li>
-//                   <li className="flex items-center">
-//                     <span className="text-gray-500 mr-3">✗</span>
-//                     Advanced features
-//                   </li>
-//                   <li className="flex items-center">
-//                     <span className="text-gray-500 mr-3">✗</span>
-//                     Priority support
-//                   </li>
-//                 </ul>
-//                 <Link href="/get-started">
-//                   <Button className="w-full mt-6 bg-white/20 hover:bg-white/30 text-white border border-white/30 transition-all duration-300">
-//                     Get Started Free
-//                   </Button>
-//                 </Link>
-//               </CardContent>
-//             </Card>
-
-//             {/* Monthly Plan */}
-//             <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white relative transition-all duration-300 hover:scale-105 hover:bg-white/15">
-//               <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-//                 Most Popular
-//               </Badge>
-//               <CardHeader className="text-center pb-8">
-//                 <CardTitle className="text-2xl font-bold">Pro Monthly</CardTitle>
-//                 <CardDescription className="text-gray-300">For professionals and teams</CardDescription>
-//                 <div className="mt-4">
-//                   <span className="text-4xl font-bold">$20</span>
-//                   <span className="text-gray-300">/month</span>
-//                 </div>
-//               </CardHeader>
-//               <CardContent className="space-y-4">
-//                 <ul className="space-y-3">
-//                   <li className="flex items-center">
-//                     <span className="text-green-400 mr-3">✓</span>
-//                     Everything in Free
-//                   </li>
-//                   <li className="flex items-center">
-//                     <span className="text-green-400 mr-3">✓</span>
-//                     Unlimited projects
-//                   </li>
-//                   <li className="flex items-center">
-//                     <span className="text-green-400 mr-3">✓</span>
-//                     Advanced 3D features
-//                   </li>
-//                   <li className="flex items-center">
-//                     <span className="text-green-400 mr-3">✓</span>
-//                     Priority support
-//                   </li>
-//                   <li className="flex items-center">
-//                     <span className="text-green-400 mr-3">✓</span>
-//                     Custom integrations
-//                   </li>
-//                 </ul>
-//                 <Link href="/get-started">
-//                   <Button className="w-full mt-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white transition-all duration-300">
-//                     Start Pro Monthly
-//                   </Button>
-//                 </Link>
-//               </CardContent>
-//             </Card>
-
-//             {/* Yearly Plan */}
-//             <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white relative transition-all duration-300 hover:scale-105 hover:bg-white/15">
-//               <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-//                 Save 40%
-//               </Badge>
-//               <CardHeader className="text-center pb-8">
-//                 <CardTitle className="text-2xl font-bold">Pro Yearly</CardTitle>
-//                 <CardDescription className="text-gray-300">Best value for committed users</CardDescription>
-//                 <div className="mt-4">
-//                   <span className="text-4xl font-bold">$144</span>
-//                   <span className="text-gray-300">/year</span>
-//                   <div className="text-sm text-green-400 mt-1">Save $96 per year</div>
-//                 </div>
-//               </CardHeader>
-//               <CardContent className="space-y-4">
-//                 <ul className="space-y-3">
-//                   <li className="flex items-center">
-//                     <span className="text-green-400 mr-3">✓</span>
-//                     Everything in Pro Monthly
-//                   </li>
-//                   <li className="flex items-center">
-//                     <span className="text-green-400 mr-3">✓</span>
-//                     40% discount
-//                   </li>
-//                   <li className="flex items-center">
-//                     <span className="text-green-400 mr-3">✓</span>
-//                     Early access to features
-//                   </li>
-//                   <li className="flex items-center">
-//                     <span className="text-green-400 mr-3">✓</span>
-//                     Dedicated account manager
-//                   </li>
-//                   <li className="flex items-center">
-//                     <span className="text-green-400 mr-3">✓</span>
-//                     Custom training sessions
-//                   </li>
-//                 </ul>
-//                 <Link href="/get-started">
-//                   <Button className="w-full mt-6 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white transition-all duration-300">
-//                     Start Pro Yearly
-//                   </Button>
-//                 </Link>
-//               </CardContent>
-//             </Card>
-//           </div>
-//         </div>
-//       </div>
-        
-     
-      
-//       <Footer/>
-      
-//     </div>
-//   )
-// }
-// ==
-
 "use client"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -222,6 +15,65 @@ import { TextPlugin } from "gsap/TextPlugin"
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, TextPlugin)
 }
+
+// Framer Motion variants for performance optimization
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.2,
+      staggerChildren: 0.1,
+    },
+  },
+} as const
+
+const itemVariants = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 12,
+    },
+  },
+} as const
+
+const cardHoverVariants = {
+  hover: {
+    scale: 1.05,
+    rotateY: 8,
+    z: 50,
+    boxShadow: "0 25px 50px rgba(0,0,0,0.3)",
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 20,
+    },
+  },
+} as const
+
+const buttonVariants = {
+  hover: {
+    scale: 1.05,
+    boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+    transition: {
+      type: "spring",
+      stiffness: 400,
+      damping: 10,
+    },
+  },
+  tap: {
+    scale: 0.95,
+    transition: {
+      type: "spring",
+      stiffness: 400,
+      damping: 17,
+    },
+  },
+} as const
 
 export default function HeroLandingPage() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -391,66 +243,7 @@ export default function HeroLandingPage() {
       scrollTriggers.forEach((trigger) => trigger.kill())
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
     }
-  }, [isVideoLoaded, isVideoError, currentStats])
-
-  // Framer Motion variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.2,
-        staggerChildren: 0.1,
-      },
-    },
-  }
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 12,
-      },
-    },
-  }
-
-  const cardHoverVariants = {
-    hover: {
-      scale: 1.05,
-      rotateY: 8,
-      z: 50,
-      boxShadow: "0 25px 50px rgba(0,0,0,0.3)",
-      transition: {
-        type: "spring",
-        stiffness: 300,
-        damping: 20,
-      },
-    },
-  }
-
-  const buttonVariants = {
-    hover: {
-      scale: 1.05,
-      boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
-      transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 10,
-      },
-    },
-    tap: {
-      scale: 0.95,
-      transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 17,
-      },
-    },
-  }
+  }, [isVideoLoaded, isVideoError])
 
   return (
     <div
@@ -621,280 +414,179 @@ export default function HeroLandingPage() {
               </motion.div>
             </Link>
           </motion.div>
-
-          {/* Enhanced Animated Stats */}
-          <motion.div
-            ref={statsRef}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-8 sm:pt-12 mt-8 sm:mt-12 px-4"
-            variants={containerVariants}
-          >
-            <motion.div
-              className="stat-item text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
-              variants={itemVariants}
-              whileHover={{
-                y: -10,
-                scale: 1.05,
-                backgroundColor: "rgba(255,255,255,0.1)",
-                transition: { type: "spring", stiffness: 300 },
-              }}
-            >
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-400 mb-2">
-                {/* {Math.floor(currentStats.users)}K+ */}
-                100K+
-              </div>
-              <div className="text-sm sm:text-base text-gray-400">Active Users</div>
-            </motion.div>
-            <motion.div
-              className="stat-item text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
-              variants={itemVariants}
-              whileHover={{
-                y: -10,
-                scale: 1.05,
-                backgroundColor: "rgba(255,255,255,0.1)",
-                transition: { type: "spring", stiffness: 300 },
-              }}
-            >
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-2">
-                {/* {Math.floor(currentStats.projects)}M+ */}
-                100M+
-              </div>
-              <div className="text-sm sm:text-base text-gray-400">Projects</div>
-            </motion.div>
-            <motion.div
-              className="stat-item text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
-              variants={itemVariants}
-              whileHover={{
-                y: -10,
-                scale: 1.05,
-                backgroundColor: "rgba(255,255,255,0.1)",
-                transition: { type: "spring", stiffness: 300 },
-              }}
-            >
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-400 mb-2">
-                {/* {currentStats.uptime}% */}
-                100%
-              </div>
-
-              <div className="text-sm sm:text-base text-gray-400">Uptime</div>
-            </motion.div>
-          </motion.div>
         </motion.div>
       </div>
 
-      {/* Enhanced Pricing Section */}
-      <motion.div
-        id="pricing"
-        ref={pricingRef}
-        className="relative z-10 py-12 sm:py-20 px-4 sm:px-6 lg:px-8"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <div className="container mx-auto max-w-7xl">
-          <motion.div
-            className="text-center mb-12 sm:mb-16"
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-blue-200 to-purple-400 bg-clip-text text-transparent">
-              Choose Your Plan
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-              Start for free and upgrade as you grow
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
-            {/* Free Tier */}
-            <motion.div
-              className="pricing-card"
-              variants={cardHoverVariants}
-              whileHover="hover"
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card className="bg-white/10 backdrop-blur-md border-white/20 text-white relative transition-all duration-300 h-full">
-                <CardHeader className="text-center pb-6 sm:pb-8">
-                  <motion.div
-                    animate={{ rotate: [0, 5, -5, 0] }}
-                    transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, repeatDelay: 3 }}
-                  >
-                    <CardTitle className="text-xl sm:text-2xl font-bold">Free</CardTitle>
-                  </motion.div>
-                  <CardDescription className="text-gray-300 text-sm sm:text-base">
-                    Perfect for getting started
-                  </CardDescription>
-                  <div className="mt-4">
-                    <span className="text-3xl sm:text-4xl font-bold">$0</span>
-                    <span className="text-gray-300">/month</span>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4 px-4 sm:px-6">
-                  <ul className="space-y-3">
-                    {[
-                      "Basic 3D experiences",
-                      "5 projects per month",
-                      "Community support",
-                      "Advanced features",
-                      "Priority support",
-                    ].map((feature, index) => (
-                      <motion.li
-                        key={feature}
-                        className="flex items-center text-sm sm:text-base"
-                        initial={{ x: -20, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.1 * index }}
-                        viewport={{ once: true }}
-                      >
-                        <span className={`mr-3 ${index < 3 ? "text-green-400" : "text-gray-500"}`}>
-                          {index < 3 ? "✓" : "✗"}
-                        </span>
-                        {feature}
-                      </motion.li>
-                    ))}
-                  </ul>
-                  <Link href="/get-started">
-                    <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                      <Button className="w-full mt-6 bg-white/20 hover:bg-white/30 text-white border border-white/30 transition-all duration-300 rounded-lg">
-                        Get Started Free
-                      </Button>
-                    </motion.div>
-                  </Link>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Pro Monthly Plan */}
-            <motion.div
-              className="pricing-card"
-              variants={cardHoverVariants}
-              whileHover="hover"
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white relative transition-all duration-300 hover:scale-105 hover:bg-white/15">
-                <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}>
-                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
-                    Most Popular
-                  </Badge>
-                </motion.div>
-                <CardHeader className="text-center pb-6 sm:pb-8">
-                  <CardTitle className="text-xl sm:text-2xl font-bold">Pro Monthly</CardTitle>
-                  <CardDescription className="text-gray-300 text-sm sm:text-base">
-                    For professionals and teams
-                  </CardDescription>
-                  <div className="mt-4">
-                    <span className="text-3xl sm:text-4xl font-bold">$20</span>
-                    <span className="text-gray-300">/month</span>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4 px-4 sm:px-6">
-                  <ul className="space-y-3">
-                    {[
-                      "Everything in Free",
-                      "Unlimited projects",
-                      "Advanced 3D features",
-                      "Priority support",
-                      "Custom integrations",
-                    ].map((feature, index) => (
-                      <motion.li
-                        key={feature}
-                        className="flex items-center text-sm sm:text-base"
-                        initial={{ x: -20, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.1 * index }}
-                        viewport={{ once: true }}
-                      >
-                        <span className="text-green-400 mr-3">✓</span>
-                        {feature}
-                      </motion.li>
-                    ))}
-                  </ul>
-                  <Link href="/get-started">
-                    <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                      <Button className="w-full mt-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white transition-all duration-300 rounded-lg shadow-lg">
-                        Start Pro Monthly
-                      </Button>
-                    </motion.div>
-                  </Link>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Pro Yearly Plan */}
-            <motion.div
-              className="pricing-card md:col-span-2 lg:col-span-1"
-              variants={cardHoverVariants}
-              whileHover="hover"
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <Card className="bg-white/10 backdrop-blur-md border-white/20 text-white relative transition-all duration-300 h-full">
-                <motion.div
-                  animate={{ rotate: [0, 2, -2, 0] }}
-                  transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
-                >
-                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-600 to-emerald-600 text-white shadow-lg">
-                    Save 40%
-                  </Badge>
-                </motion.div>
-                <CardHeader className="text-center pb-6 sm:pb-8">
-                  <CardTitle className="text-xl sm:text-2xl font-bold">Pro Yearly</CardTitle>
-                  <CardDescription className="text-gray-300 text-sm sm:text-base">
-                    Best value for committed users
-                  </CardDescription>
-                  <div className="mt-4">
-                    <span className="text-3xl sm:text-4xl font-bold">$144</span>
-                    <span className="text-gray-300">/year</span>
-                    <div className="text-sm text-green-400 mt-1">Save $96 per year</div>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4 px-4 sm:px-6">
-                  <ul className="space-y-3">
-                    {[
-                      "Everything in Pro Monthly",
-                      "40% discount",
-                      "Early access to features",
-                      "Dedicated account manager",
-                      "Custom training sessions",
-                    ].map((feature, index) => (
-                      <motion.li
-                        key={feature}
-                        className="flex items-center text-sm sm:text-base"
-                        initial={{ x: -20, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.1 * index }}
-                        viewport={{ once: true }}
-                      >
-                        <span className="text-green-400 mr-3">✓</span>
-                        {feature}
-                      </motion.li>
-                    ))}
-                  </ul>
-                  <Link href="/get-started">
-                    <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                      <Button className="w-full mt-6 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white transition-all duration-300 rounded-lg shadow-lg">
-                        Start Pro Yearly
-                      </Button>
-                    </motion.div>
-                  </Link>
-                </CardContent>
-              </Card>
-            </motion.div>
+      {/* Stats Section */}
+      <div ref={statsRef} className="relative z-10 py-16 sm:py-20 bg-black/20 backdrop-blur-md">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="stat-item p-4 rounded-lg">
+              <h3 className="text-4xl sm:text-5xl font-bold text-white">
+                {Math.floor(currentStats.users)}+
+              </h3>
+              <p className="text-lg sm:text-xl text-gray-300 mt-2">Happy Users</p>
+            </div>
+            <div className="stat-item p-4 rounded-lg">
+              <h3 className="text-4xl sm:text-5xl font-bold text-white">
+                {Math.floor(currentStats.projects)}+
+              </h3>
+              <p className="text-lg sm:text-xl text-gray-300 mt-2">Projects Created</p>
+            </div>
+            <div className="stat-item p-4 rounded-lg">
+              <h3 className="text-4xl sm:text-5xl font-bold text-white">
+                {currentStats.uptime.toFixed(1)}%
+              </h3>
+              <p className="text-lg sm:text-xl text-gray-300 mt-2">Uptime</p>
+            </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
-      <Footer />
+
+      {/* Pricing Section */}
+      <div id="pricing" ref={pricingRef} className="relative z-10 py-20 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-blue-200 to-purple-400 bg-clip-text text-transparent">
+              Choose Your Plan
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">Start for free and upgrade as you grow</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Free Tier */}
+            <Card className="pricing-card bg-white/10 backdrop-blur-sm border-white/20 text-white relative transition-all duration-300 hover:scale-105 hover:bg-white/15">
+              <CardHeader className="text-center pb-8">
+                <CardTitle className="text-2xl font-bold">Free</CardTitle>
+                <CardDescription className="text-gray-300">Perfect for getting started</CardDescription>
+                <div className="mt-4">
+                  <span className="text-4xl font-bold">$0</span>
+                  <span className="text-gray-300">/month</span>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <ul className="space-y-3">
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-3">✓</span>
+                    Basic 3D experiences
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-3">✓</span>5 projects per month
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-3">✓</span>
+                    Community support
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-gray-500 mr-3">✗</span>
+                    Advanced features
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-gray-500 mr-3">✗</span>
+                    Priority support
+                  </li>
+                </ul>
+                <Link href="/get-started">
+                  <Button className="w-full mt-6 bg-white/20 hover:bg-white/30 text-white border border-white/30 transition-all duration-300">
+                    Get Started Free
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Monthly Plan */}
+            <Card className="pricing-card bg-white/10 backdrop-blur-sm border-white/20 text-white relative transition-all duration-300 hover:scale-105 hover:bg-white/15">
+              <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+                Most Popular
+              </Badge>
+              <CardHeader className="text-center pb-8">
+                <CardTitle className="text-2xl font-bold">Pro Monthly</CardTitle>
+                <CardDescription className="text-gray-300">For professionals and teams</CardDescription>
+                <div className="mt-4">
+                  <span className="text-4xl font-bold">$20</span>
+                  <span className="text-gray-300">/month</span>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <ul className="space-y-3">
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-3">✓</span>
+                    Everything in Free
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-3">✓</span>
+                    Unlimited projects
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-3">✓</span>
+                    Advanced 3D features
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-3">✓</span>
+                    Priority support
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-3">✓</span>
+                    Custom integrations
+                  </li>
+                </ul>
+                <Link href="/get-started">
+                  <Button className="w-full mt-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white transition-all duration-300">
+                    Start Pro Monthly
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Yearly Plan */}
+            <Card className="pricing-card bg-white/10 backdrop-blur-sm border-white/20 text-white relative transition-all duration-300 hover:scale-105 hover:bg-white/15">
+              <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+                Save 40%
+              </Badge>
+              <CardHeader className="text-center pb-8">
+                <CardTitle className="text-2xl font-bold">Pro Yearly</CardTitle>
+                <CardDescription className="text-gray-300">Best value for committed users</CardDescription>
+                <div className="mt-4">
+                  <span className="text-4xl font-bold">$144</span>
+                  <span className="text-gray-300">/year</span>
+                  <div className="text-sm text-green-400 mt-1">Save $96 per year</div>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <ul className="space-y-3">
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-3">✓</span>
+                    Everything in Pro Monthly
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-3">✓</span>
+                    40% discount
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-3">✓</span>
+                    Early access to features
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-3">✓</span>
+                    Dedicated account manager
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-400 mr-3">✓</span>
+                    Custom training sessions
+                  </li>
+                </ul>
+                <Link href="/get-started">
+                  <Button className="w-full mt-6 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white transition-all duration-300">
+                    Start Pro Yearly
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+      <Footer/>
     </div>
   )
 }
