@@ -639,7 +639,8 @@ export default function HeroLandingPage() {
               }}
             >
               <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-400 mb-2">
-                {Math.floor(currentStats.users)}K+
+                {/* {Math.floor(currentStats.users)}K+ */}
+                100K+
               </div>
               <div className="text-sm sm:text-base text-gray-400">Active Users</div>
             </motion.div>
@@ -654,7 +655,8 @@ export default function HeroLandingPage() {
               }}
             >
               <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 mb-2">
-                {Math.floor(currentStats.projects)}M+
+                {/* {Math.floor(currentStats.projects)}M+ */}
+                100M+
               </div>
               <div className="text-sm sm:text-base text-gray-400">Projects</div>
             </motion.div>
@@ -669,8 +671,10 @@ export default function HeroLandingPage() {
               }}
             >
               <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-400 mb-2">
-                {currentStats.uptime}%
+                {/* {currentStats.uptime}% */}
+                100%
               </div>
+
               <div className="text-sm sm:text-base text-gray-400">Uptime</div>
             </motion.div>
           </motion.div>
